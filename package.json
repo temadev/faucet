@@ -6,19 +6,16 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.0",
-    "web3": "^1.7.0"
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-types": "typechain --target=truffle-v5 './build/contracts/*.json'",
-    "generate-types-client": "typechain --target=web3-v1 './build/contracts/*.json'",
-    "postinstall": "truffle compile && npm run generate-types && npm run generate-types-client",
-    "compile": "truffle compile && npm run generate-types",
-    "migrate": "tsc -p ./tsconfig.migrate.json --outDir migrations && truffle migrate"
+    "generate-types": "typechain --target=truffle-v5 'build/contracts/*.json'",
+    "postinstall": "truffle compile && npm run generate-types",
+    "migrate": "tsc -p ./tsconfig.migrate.json --outDir ./migrations && truffle migrate"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +44,6 @@
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
     "@typechain/truffle-v5": "^7.0.0",
-    "@typechain/web3-v1": "^5.0.0",
     "@types/bn.js": "^5.1.0",
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.1.0",

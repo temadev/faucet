@@ -1,10 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const Migrations = artifacts.require('Migrations');
-module.exports = (artifacts) => {
-    return async (deployer, network, accounts) => {
-        artifacts.require('Migrations');
-        deployer.deploy(Migrations);
-    };
+module.exports = function (deployer, network, accounts) {
+    deployer.deploy(Migrations);
 };
-// export {}
-//# sourceMappingURL=1_initial_migration.js.map
